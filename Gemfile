@@ -7,6 +7,6 @@ gem 'heroku'
 
 group :development do
   gem 'rake'
-  gem 'rcov'
+  gem 'simplecov'
   gem "rspec"
 end

@@ -1,11 +1,12 @@
 gem 'rspec'
-require 'spec'
-require 'spec/rake/spectask'
+require 'rspec/core/rake_task'
 
 desc "Default Task"
 task :default => [ :spec ]
 
 desc "Run all specs"
-Spec::Rake::SpecTask.new do |t|
-  t.spec_files = FileList['spec/**/*_spec.rb']
+RSpec::Core::RakeTask.new do |t|
+  t.pattern = "./spec/**/*_spec.rb"
+  t.rspec_opts = "--fail-fast --format documentation --colour"
 end
+
