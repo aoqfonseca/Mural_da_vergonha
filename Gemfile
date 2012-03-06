@@ -1,6 +1,6 @@
 source :gemcutter
 gem 'haml'
-gem 'arrayextension', :git => "git://github.com/viniciusteles/arrayextension.git"
+gem 'arrayextension'
 gem 'sinatra'
 gem 'heroku'
 
