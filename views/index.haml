@@ -24,10 +24,12 @@
       #content
         %dl#horoscopo.clearfix
           - 6.times do
+            - phrase = @phrases.dados
+            %dt= phrase["autor"]
             %dd
               %blockquote
                 %p
-                  = phrase = @phrases.select
+                  = phrase["texto"]
       %hr
       #footer
         %p

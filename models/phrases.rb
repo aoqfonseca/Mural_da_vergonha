@@ -10,6 +10,14 @@ class Phrases < Array
     @drawn << result
     result
   end
+  
+  def dados
+    linha = select
+    linha = linha.split('|')
+    autor = "anonimo"
+    autor = linha[1] unless linha[1].nil? or linha[1].empty?
+    {"texto" => linha[0], "autor" => autor}
+  end
 
   def candidates
     self - @drawn
