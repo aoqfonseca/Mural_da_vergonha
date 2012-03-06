@@ -1,2 +1,2 @@
-require 'desoroscopo'
+require 'mural'
 run Sinatra::Application

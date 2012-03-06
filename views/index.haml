@@ -10,39 +10,28 @@
 
     %link{ :href => "favicon.ico", :rel => "shortcut icon", :type => "image/x-icon" }
     %title
-      desoroscopo
+      Mural da Vergonha
     %link{ :href => "/css/styles.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
     %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
     %script{ :src => "/javascripts/mobile.js"}
 
   %body
-    %a{:href => "http://horaextra.org", :id => "he"}
-      = "#horaextra"
     #page
       #header
         %h1
           %a{ :href => "/" }
-            =# TODO: gambiarra detected!
-            = "<strong>des</strong>oroscopo"
+            = "<strong>MURAL</strong> da Vergonha do Time"
       %hr
       #content
         %dl#horoscopo.clearfix
-          - @zoodiacs.each do |zoodiac|
-            %dt= zoodiac
+          - 10.times do
+            %dt= "Frase"
             %dd
               %blockquote
                 %p
                   = phrase = @phrases.select
-                  - tweet_phrase = "#desoroscopo  ##{zoodiac} #{phrase}"
-                  %a{:href => "http://twitter.com/home?status=#{CGI.escape(tweet_phrase)}", :class => 'tweet-link'}
-                    %img{:src => '/images/tweet_icon.png', :alt => 'tuitar'}
       %hr
       #footer
         %p
-          &copy; 2010.
+          &copy; 2012.
           %a{ :href => "/", :rel => "license" }
-            desoroscopo
-          , coisa nenhuma reserved.
-
-    %script{ :src => "/javascripts/analytics-one.js"}
-    %script{ :src => "/javascripts/analytics-two.js"}
