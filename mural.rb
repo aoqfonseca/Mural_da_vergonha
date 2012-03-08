@@ -17,3 +17,10 @@ get '/' do
   haml :index
 end
 
+get '/ranking' do
+  @phrases = Phrases.new
+  haml :index
+end
+
+
+
