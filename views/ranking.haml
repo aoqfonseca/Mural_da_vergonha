@@ -1,0 +1,35 @@
+<!doctype html>
+%html
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+    %meta{ :name => "description", :content => "" }
+    %meta{ :name => "keywords", :content => "" }
+    %meta{ :content => "en-US", "http-equiv" => "content-Language" }
+    %meta{ :content => "width=device-width, initial-scale = 1.0, user-scalable=yes", "name" => "viewport" }
+
+    %link{ :href => "favicon.ico", :rel => "shortcut icon", :type => "image/x-icon" }
+    %title
+      Mural da Vergonha
+    %link{ :href => "/css/styles.css", :rel => "stylesheet", :type => "text/css", :media => "screen" }
+    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+    %script{ :src => "/javascripts/mobile.js"}
+
+  %body
+    #page
+      #header
+        %h1
+          %a{ :href => "/" }
+            = "<strong>MURAL</strong> da Vergonha do Time - Ranking"
+      %hr
+      #content
+        %dl#horoscopo.clearfix
+          - @ranking.each do |k, v|
+            %dt= k
+            %dd
+              %blockquote
+                %p= "Falou #{v} frases emblemáticas"
+      %hr
+      #footer
+        %p
+          &copy; 2012. André Fonseca @aoqfonseca, aproveitando uma ideia maluca de Vinícius Chagas @vinimaster
+          %a{ :href => "/", :rel => "license" }
