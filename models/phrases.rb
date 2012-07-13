@@ -10,7 +10,7 @@ class Phrases < Array
     @drawn << result
     result
   end
-  
+
   def dados
     linha = select
     linha = linha.split('|')
